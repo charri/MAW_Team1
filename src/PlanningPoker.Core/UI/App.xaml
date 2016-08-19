@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PlanningPoker.Core.App">
+             x:Class="PlanningPoker.Core.UI.App">
   <Application.Resources>
     <ResourceDictionary>
       <Color x:Key="Primary">#F44336</Color>
@@ -37,17 +37,6 @@
       <OnPlatform x:TypeArguments="x:Double" Android="14" iOS="14" WinPhone="14" x:Key="TweetTextSize" />
       <OnPlatform x:TypeArguments="Font" Android="SemiBold" iOS="SemiBold" WinPhone="SemiBold" x:Key="TweetUserTextSize" />
       <OnPlatform x:TypeArguments="x:String" Android="sans-serif-light" x:Key="SectionLabelFontFamily" />
-
-
-      <Style x:Key="TweetUserTextStyle" TargetType="Label" BaseResourceKey="ListItemDetailTextStyle">
-        <Setter Property="Font" Value="{DynamicResource TweetUserTextSize}" />
-        <Setter Property="FontSize" Value="{DynamicResource AppListItemTextStyleSize}" />
-      </Style>
-
-      <Style x:Key="TweetTextStyle" TargetType="Label" BaseResourceKey="ListItemDetailTextStyle">
-        <Setter Property="FontSize" Value="{DynamicResource TweetTextSize}" />
-        <Setter Property="TextColor" Value="{DynamicResource DetailTextColor}"/>
-      </Style>
 
       <Style x:Key="AppListItemTextStyle" TargetType="Label" BaseResourceKey="ListItemTextStyle">
         <Setter Property="FontSize" Value="{DynamicResource AppListItemTextStyleSize}" />

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using PlanningPoker.Core.UI.Pages;
 using Xamarin.Forms;
 
 namespace PlanningPoker.Core.UI
@@ -14,6 +14,7 @@ namespace PlanningPoker.Core.UI
         {
             InitializeComponent();
 
+            MainPage = new NavigationPage(new CardOverviewPage());
 
 
             //switch (Device.OS)

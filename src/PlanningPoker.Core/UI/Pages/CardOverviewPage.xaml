@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:model="clr-namespace:PlanningPoker.Core.Model;assembly=PlanningPoker.Core"
+             x:Class="PlanningPoker.Core.UI.Pages.CardOverviewPage"
+             Title="bbv Software Services">
+  <Grid>
+    <Grid.RowDefinitions>
+
+    </Grid.RowDefinitions>
+    <Button Text="0.5" Command="{Binding CardSelectedCommand}">
+      <Button.CommandParameter>
+        <model:Card Value="0.5" />
+      </Button.CommandParameter>
+    </Button>
+  </Grid>
+</ContentPage>

@@ -28,7 +28,10 @@ namespace PlanningPoker.UiTests
         [Test]
         public void AppLaunches()
         {
-            app.Screenshot("First screen.");
+			app.Tap(x => x.Text("0.5"));
+            app.Screenshot("Card Page.");
+			app.Tap(x => x.Text("Back"));
+			app.Screenshot("Overview.");
         }
     }
 }

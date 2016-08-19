@@ -4,4 +4,47 @@
              x:Class="PlanningPoker.Core.UI.Pages.CardPage"
              Title="{Binding Card.Value}">
   
+    <Grid
+      VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
+      >
+      <AbsoluteLayout BackgroundColor="{DynamicResource Primary}"
+                      IsVisible="{Binding ShowFront}"
+                      VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
+                      AbsoluteLayout.LayoutFlags="All" 
+            AbsoluteLayout.LayoutBounds="0,0,1,1">
+        <AbsoluteLayout.GestureRecognizers>
+          <TapGestureRecognizer Command="{Binding BackCommand}"></TapGestureRecognizer>
+        </AbsoluteLayout.GestureRecognizers>
+        <Frame VerticalOptions="FillAndExpand" BackgroundColor="{DynamicResource WindowBackground}"
+               HorizontalOptions="FillAndExpand"
+          Margin="{DynamicResource StandardPadding}">
+
+          <Label Text="{Binding Card.Value}"
+                 VerticalOptions="CenterAndExpand"
+                 HorizontalOptions="CenterAndExpand" FontSize="200"
+                 TextColor="Black"/>
+        </Frame>
+        
+      </AbsoluteLayout>  
+      
+      <AbsoluteLayout BackgroundColor="{DynamicResource WindowBackground}" IsVisible="{Binding ShowBack}"
+          AbsoluteLayout.LayoutFlags="All"
+            AbsoluteLayout.LayoutBounds="0,0,1,1">
+        <AbsoluteLayout.GestureRecognizers>
+          <TapGestureRecognizer Command="{Binding ShowFrontCommand}"></TapGestureRecognizer>
+        </AbsoluteLayout.GestureRecognizers>
+        <StackLayout 
+          VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Vertical">
+          <Image Source="https://xamdevdaych.blob.core.windows.net/app/bbv_logo.png" VerticalOptions="CenterAndExpand" Margin="{DynamicResource StandardPadding}" />
+          <Label Text="Let's celebrate SCRUM's 30st birthday" FontSize="50"
+                 Margin="{DynamicResource StandardPadding}"
+                 VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+        
+      </AbsoluteLayout>
+      
+    </Grid>
+  
+   
+  
 </ContentPage>

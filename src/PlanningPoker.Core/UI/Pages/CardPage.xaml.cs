@@ -20,6 +20,9 @@ namespace PlanningPoker.Core.UI.Pages
 
 
             BindingContext = ViewModel = new CardViewModel(Navigation, card);
+
+            NavigationPage.SetHasNavigationBar(this, false);
+
         }
     }
 }

@@ -5,26 +5,28 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Xamarin.Forms;
+using Xamarin.Forms.Platform.Android;
 
 namespace PlanningPoker.Android
 {
     [Activity(Label = "PlanningPoker.Android", MainLauncher = true, Icon = "@drawable/icon")]
-    public class MainActivity : Activity
+    public class MainActivity : FormsAppCompatActivity
     {
-        int count = 1;
-
-        protected override void OnCreate(Bundle bundle)
+        protected override void OnCreate(Bundle savedInstanceState)
         {
-            base.OnCreate(bundle);
 
-            // Set our view from the "main" layout resource
-            SetContentView(Resource.Layout.Main);
+            FormsAppCompatActivity.ToolbarResource = Resource.Layout.toolbar;
+            FormsAppCompatActivity.TabLayoutResource = Resource.Layout.tabs;
 
-            // Get our button from the layout resource,
-            // and attach an event to it
-            Button button = FindViewById<Button>(Resource.Id.MyButton);
 
-            button.Click += delegate { button.Text = string.Format("{0} clicks!", count++); };
+            base.OnCreate(savedInstanceState);
+
+            Forms.Init(this, savedInstanceState);
+
+            Toolkit.Init();
+
+            LoadApplication(new App());
         }
     }
 }

@@ -8,10 +8,20 @@ namespace PlanningPoker.Core.ViewModel
     public class CardOverviewViewModel
         : ViewModelBase
     {
-        public CardOverviewViewModel(INavigation navigation)
+        private Deck _deck;
+        public Deck Deck
+        {
+            get { return _deck; }
+            set
+            {
+                SetProperty(ref _deck, value);
+            }
+        }
+
+        public CardOverviewViewModel(INavigation navigation, Deck deck)
             : base(navigation)
         {
-            
+            Deck = deck;
         }
 
         private ICommand _cardSelectedCommand;

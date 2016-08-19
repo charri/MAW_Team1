@@ -4,5 +4,14 @@
     {
         public string Value { get; set; }
 
+        public Card()
+        {
+
+        }
+
+        public Card(string value)
+        {
+            Value = value;
+        }
     }
 }

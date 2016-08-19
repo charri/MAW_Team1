@@ -3,15 +3,42 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:model="clr-namespace:PlanningPoker.Core.Model;assembly=PlanningPoker.Core"
              x:Class="PlanningPoker.Core.UI.Pages.CardOverviewPage"
-             Title="bbv Software Services">
+             Title="bbv Software Services" >
   <Grid>
     <Grid.RowDefinitions>
-
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
     </Grid.RowDefinitions>
-    <Button Text="0.5" Command="{Binding CardSelectedCommand}">
-      <Button.CommandParameter>
-        <model:Card Value="0.5" />
-      </Button.CommandParameter>
+
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="*" />
+    </Grid.ColumnDefinitions>
+
+    <Button Text="{Binding Deck.Cards[0].Value}" Command="{Binding CardSelectedCommand}" Grid.Row="0" Grid.Column="0" CommandParameter="{Binding Deck.Cards[0]}">
     </Button>
+    <Button Text="{Binding Deck.Cards[1].Value}" Command="{Binding CardSelectedCommand}" Grid.Row="0" Grid.Column="1" CommandParameter="{Binding Deck.Cards[1]}">
+    </Button>  
+    <Button Text="{Binding Deck.Cards[2].Value}" Command="{Binding CardSelectedCommand}" Grid.Row="0" Grid.Column="2" CommandParameter="{Binding Deck.Cards[2]}">
+    </Button>    
+
+    <Button Text="{Binding Deck.Cards[3].Value}" Command="{Binding CardSelectedCommand}" Grid.Row="1" Grid.Column="0" CommandParameter="{Binding Deck.Cards[3]}">
+    </Button>
+    <Button Text="{Binding Deck.Cards[4].Value}" Command="{Binding CardSelectedCommand}" Grid.Row="1" Grid.Column="1" CommandParameter="{Binding Deck.Cards[4]}">
+    </Button>  
+    <Button Text="{Binding Deck.Cards[5].Value}" Command="{Binding CardSelectedCommand}" Grid.Row="1" Grid.Column="2" CommandParameter="{Binding Deck.Cards[5]}">
+    </Button>    
+
+    <Button Text="{Binding Deck.Cards[6].Value}" Command="{Binding CardSelectedCommand}" Grid.Row="2" Grid.Column="0" CommandParameter="{Binding Deck.Cards[6]}">
+    </Button>
+    <Button Text="{Binding Deck.Cards[7].Value}" Command="{Binding CardSelectedCommand}" Grid.Row="2" Grid.Column="1" CommandParameter="{Binding Deck.Cards[7]}">
+    </Button>  
+    <Button Text="{Binding Deck.Cards[8].Value}" Command="{Binding CardSelectedCommand}" Grid.Row="2" Grid.Column="2" CommandParameter="{Binding Deck.Cards[8]}">
+    </Button>    
+
+  
   </Grid>
+
 </ContentPage>

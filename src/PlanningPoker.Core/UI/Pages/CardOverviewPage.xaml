@@ -17,52 +17,25 @@
       <ColumnDefinition Width="*" />
     </Grid.ColumnDefinitions>
 
-    <Button Text="{Binding Deck.Cards[0].Value}" Command="{Binding CardSelectedCommand}" Grid.Row="0" Grid.Column="0">
-      <Button.CommandParameter>
-        <model:Card Value="{Binding Deck.Cards[0].Value}"/>
-      </Button.CommandParameter>
+    <Button Text="{Binding Deck.Cards[0].Value}" Command="{Binding CardSelectedCommand}" Grid.Row="0" Grid.Column="0" CommandParameter="{Binding Deck.Cards[0]}">
     </Button>
-    <Button Text="{Binding Deck.Cards[1].Value}" Command="{Binding CardSelectedCommand}" Grid.Row="0" Grid.Column="1">
-      <Button.CommandParameter>
-        <model:Card Value="{Binding Deck.Cards[1].Value}"/>
-      </Button.CommandParameter>
+    <Button Text="{Binding Deck.Cards[1].Value}" Command="{Binding CardSelectedCommand}" Grid.Row="0" Grid.Column="1" CommandParameter="{Binding Deck.Cards[1]}">
     </Button>  
-    <Button Text="{Binding Deck.Cards[2].Value}" Command="{Binding CardSelectedCommand}" Grid.Row="0" Grid.Column="2">
-      <Button.CommandParameter>
-        <model:Card Value="{Binding Deck.Cards[2].Value}"/>
-      </Button.CommandParameter>
+    <Button Text="{Binding Deck.Cards[2].Value}" Command="{Binding CardSelectedCommand}" Grid.Row="0" Grid.Column="2" CommandParameter="{Binding Deck.Cards[2]}">
     </Button>    
 
-     <Button Text="{Binding Deck.Cards[3].Value}" Command="{Binding CardSelectedCommand}" Grid.Row="1" Grid.Column="0">
-      <Button.CommandParameter>
-        <model:Card Value="{Binding Deck.Cards[3].Value}"/>
-      </Button.CommandParameter>
+    <Button Text="{Binding Deck.Cards[3].Value}" Command="{Binding CardSelectedCommand}" Grid.Row="1" Grid.Column="0" CommandParameter="{Binding Deck.Cards[3]}">
     </Button>
-    <Button Text="{Binding Deck.Cards[4].Value}" Command="{Binding CardSelectedCommand}" Grid.Row="1" Grid.Column="1">
-      <Button.CommandParameter>
-        <model:Card Value="{Binding Deck.Cards[4].Value}"/>
-      </Button.CommandParameter>
+    <Button Text="{Binding Deck.Cards[4].Value}" Command="{Binding CardSelectedCommand}" Grid.Row="1" Grid.Column="1" CommandParameter="{Binding Deck.Cards[4]}">
     </Button>  
-    <Button Text="{Binding Deck.Cards[5].Value}" Command="{Binding CardSelectedCommand}" Grid.Row="1" Grid.Column="2">
-      <Button.CommandParameter>
-        <model:Card Value="{Binding Deck.Cards[5].Value}"/>
-      </Button.CommandParameter>
+    <Button Text="{Binding Deck.Cards[5].Value}" Command="{Binding CardSelectedCommand}" Grid.Row="1" Grid.Column="2" CommandParameter="{Binding Deck.Cards[5]}">
     </Button>    
 
-        <Button Text="{Binding Deck.Cards[6].Value}" Command="{Binding CardSelectedCommand}" Grid.Row="2" Grid.Column="0">
-      <Button.CommandParameter>
-        <model:Card Value="{Binding Deck.Cards[6].Value}"/>
-      </Button.CommandParameter>
+    <Button Text="{Binding Deck.Cards[6].Value}" Command="{Binding CardSelectedCommand}" Grid.Row="2" Grid.Column="0" CommandParameter="{Binding Deck.Cards[6]}">
     </Button>
-    <Button Text="{Binding Deck.Cards[7].Value}" Command="{Binding CardSelectedCommand}" Grid.Row="2" Grid.Column="1">
-      <Button.CommandParameter>
-        <model:Card Value="{Binding Deck.Cards[7].Value}"/>
-      </Button.CommandParameter>
+    <Button Text="{Binding Deck.Cards[7].Value}" Command="{Binding CardSelectedCommand}" Grid.Row="2" Grid.Column="1" CommandParameter="{Binding Deck.Cards[7]}">
     </Button>  
-    <Button Text="{Binding Deck.Cards[8].Value}" Command="{Binding CardSelectedCommand}" Grid.Row="2" Grid.Column="2">
-      <Button.CommandParameter>
-        <model:Card Value="{Binding Deck.Cards[8].Value}"/>
-      </Button.CommandParameter>
+    <Button Text="{Binding Deck.Cards[8].Value}" Command="{Binding CardSelectedCommand}" Grid.Row="2" Grid.Column="2" CommandParameter="{Binding Deck.Cards[8]}">
     </Button>    
 
   

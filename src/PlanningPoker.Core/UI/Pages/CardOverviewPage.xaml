@@ -3,15 +3,69 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:model="clr-namespace:PlanningPoker.Core.Model;assembly=PlanningPoker.Core"
              x:Class="PlanningPoker.Core.UI.Pages.CardOverviewPage"
-             Title="bbv Software Services">
+             Title="bbv Software Services" >
   <Grid>
     <Grid.RowDefinitions>
-
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
     </Grid.RowDefinitions>
-    <Button Text="0.5" Command="{Binding CardSelectedCommand}">
+
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="*" />
+    </Grid.ColumnDefinitions>
+
+    <Button Text="{Binding Deck.Cards[0].Value}" Command="{Binding CardSelectedCommand}" Grid.Row="0" Grid.Column="0">
       <Button.CommandParameter>
-        <model:Card Value="0.5" />
+        <model:Card Value="{Binding Deck.Cards[0].Value}"/>
       </Button.CommandParameter>
     </Button>
+    <Button Text="{Binding Deck.Cards[1].Value}" Command="{Binding CardSelectedCommand}" Grid.Row="0" Grid.Column="1">
+      <Button.CommandParameter>
+        <model:Card Value="{Binding Deck.Cards[1].Value}"/>
+      </Button.CommandParameter>
+    </Button>  
+    <Button Text="{Binding Deck.Cards[2].Value}" Command="{Binding CardSelectedCommand}" Grid.Row="0" Grid.Column="2">
+      <Button.CommandParameter>
+        <model:Card Value="{Binding Deck.Cards[2].Value}"/>
+      </Button.CommandParameter>
+    </Button>    
+
+     <Button Text="{Binding Deck.Cards[3].Value}" Command="{Binding CardSelectedCommand}" Grid.Row="1" Grid.Column="0">
+      <Button.CommandParameter>
+        <model:Card Value="{Binding Deck.Cards[3].Value}"/>
+      </Button.CommandParameter>
+    </Button>
+    <Button Text="{Binding Deck.Cards[4].Value}" Command="{Binding CardSelectedCommand}" Grid.Row="1" Grid.Column="1">
+      <Button.CommandParameter>
+        <model:Card Value="{Binding Deck.Cards[4].Value}"/>
+      </Button.CommandParameter>
+    </Button>  
+    <Button Text="{Binding Deck.Cards[5].Value}" Command="{Binding CardSelectedCommand}" Grid.Row="1" Grid.Column="2">
+      <Button.CommandParameter>
+        <model:Card Value="{Binding Deck.Cards[5].Value}"/>
+      </Button.CommandParameter>
+    </Button>    
+
+        <Button Text="{Binding Deck.Cards[6].Value}" Command="{Binding CardSelectedCommand}" Grid.Row="2" Grid.Column="0">
+      <Button.CommandParameter>
+        <model:Card Value="{Binding Deck.Cards[6].Value}"/>
+      </Button.CommandParameter>
+    </Button>
+    <Button Text="{Binding Deck.Cards[7].Value}" Command="{Binding CardSelectedCommand}" Grid.Row="2" Grid.Column="1">
+      <Button.CommandParameter>
+        <model:Card Value="{Binding Deck.Cards[7].Value}"/>
+      </Button.CommandParameter>
+    </Button>  
+    <Button Text="{Binding Deck.Cards[8].Value}" Command="{Binding CardSelectedCommand}" Grid.Row="2" Grid.Column="2">
+      <Button.CommandParameter>
+        <model:Card Value="{Binding Deck.Cards[8].Value}"/>
+      </Button.CommandParameter>
+    </Button>    
+
+  
   </Grid>
+
 </ContentPage>
